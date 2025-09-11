@@ -241,8 +241,9 @@ export const NavbarLogo = () => {
         alt="logo"
         width={30}
         height={30}
+        style={{ transform: "rotate(180deg)" }}
       />
-      <span className="font-medium text-black dark:text-white">CreditMatch</span>
+      <span className="text-xl font-bold text-black dark:text-white">Visibel</span>
     </a>
   );
 };

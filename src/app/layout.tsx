@@ -12,32 +12,56 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+import localFont from "next/font/local";
 
-export const metadata: Metadata = {
-  title: "CreditMatch – Smart Adverse Credit Assessment",
-  description:
-    "CreditMatch helps lenders assess adverse credit history with precision rules, limits, and instant decision support.",
-  keywords: [
-    "adverse credit",
-    "credit assessment",
-    "loan eligibility",
-    "lender rules",
-    "financial risk analysis",
+const sfProDisplay = localFont({
+  src: [
+    {
+      path: "./fonts/SFProDisplay/SFPRODISPLAYREGULAR.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/SFProDisplay/SFPRODISPLAYMEDIUM.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/SFProDisplay/SFPRODISPLAYBOLD.otf",
+      weight: "700",
+      style: "normal",
+    },
   ],
-  authors: [{ name: "CreditMatch" }],
-  metadataBase: new URL("https://adverse-credit-assessment.vercel.app"),
+  variable: "--font-sf-pro", // CSS variable for Tailwind integration
+});
+export const metadata: Metadata = {
+  title: "Visibel – AI Visibility for Hotels, Restaurants & Agencies",
+  description:
+    "Visibel helps hotels, restaurants, and agencies win the top slot in AI answers across ChatGPT, Gemini, Perplexity, Grok, and more—driving direct bookings and brand visibility.",
+  keywords: [
+    "AI visibility",
+    "hotels",
+    "restaurants",
+    "hospitality marketing",
+    "answer engine optimization",
+    "generative engine optimization",
+    "brand visibility score",
+    "direct bookings",
+  ],
+  authors: [{ name: "Visibel" }],
+  metadataBase: new URL("https://visibel.ai"),
   openGraph: {
-    title: "CreditMatch – Smart Adverse Credit Assessment",
+    title: "Visibel – AI Visibility for Hotels, Restaurants & Agencies",
     description:
-      "CreditMatch helps lenders assess adverse credit history with precision rules, limits, and instant decision support.",
-    url: "https://adverse-credit-assessment.vercel.app",
-    siteName: "CreditMatch",
+      "Be the first brand AI recommends. Visibel gets your hotel, restaurant, or client agency mentioned in top AI answers and boosts your direct bookings.",
+    url: "https://visibel.ai",
+    siteName: "Visibel",
     images: [
       {
         url: "/ss.webp",
         width: 1200,
         height: 630,
-        alt: "CreditMatch",
+        alt: "Visibel Dashboard",
       },
     ],
     locale: "en_US",
@@ -45,13 +69,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CreditMatch – Smart Adverse Credit Assessment",
+    title: "Visibel – AI Visibility for Hotels, Restaurants & Agencies",
     description:
-      "CreditMatch helps lenders assess adverse credit history with precision rules, limits, and instant decision support.",
+      "Own the top slot in AI answers. Visibel boosts your brand’s AI visibility score and drives more direct bookings.",
     images: ["/ss.webp"],
-    creator: "@kirihararyoji", // optional
+    creator: "@visibel_ai", // optional, update if you have the handle
   },
-  themeColor: "#0066cc",
+  themeColor: "#1E40AF", // Visibel brand blue, adjust as needed
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -63,6 +87,7 @@ export const metadata: Metadata = {
   },
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -71,7 +96,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${sfProDisplay.variable} antialiased`}
       >
         <ThemeProvider
             attribute="class"

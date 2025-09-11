@@ -27,11 +27,11 @@ interface Footer2Props {
 const Footer2 = ({
   logo = {
     src: "/favicon.ico",
-    alt: "CreditMatch logo",
-    title: "CreditMatch",
-    url: "https://adverse-credit-assessment.vercel.app",
+    alt: "Visibel logo",
+    title: "Visibel",
+    url: "https://visibel.ai",
   },
-  tagline = "Smart Adverse Credit Assessment for Lenders",
+  tagline = "AI Visibility for Hotels, Restaurants & Agencies",
   menuItems = [
     {
       title: "Product",
@@ -43,30 +43,31 @@ const Footer2 = ({
       ],
     },
     {
-      title: "Company",
+      title: "Solutions",
       links: [
-        { text: "About", url: "/about" },
-        { text: "Contact", url: "/contact" },
-        { text: "Blog", url: "/blog" },
+        { text: "Independent Hotels", url: "/hotels" },
+        { text: "Restaurants", url: "/restaurants" },
+        { text: "Hotel Groups", url: "/hotel-groups" },
+        { text: "Marketing Agencies", url: "/agencies" },
       ],
     },
     {
       title: "Resources",
       links: [
         { text: "Help Center", url: "/help" },
-        { text: "Documentation", url: "/docs" },
-        { text: "API Reference", url: "/api" },
+        { text: "AEO Guide", url: "/answer-engine-optimization" },
+        { text: "GEO Guide", url: "/generative-engine-optimization" },
       ],
     },
     {
       title: "Social",
       links: [
-        { text: "Twitter", url: "https://twitter.com/kirihararyoji" },
-        { text: "LinkedIn", url: "https://linkedin.com/company/creditmatch" },
+        { text: "Twitter", url: "https://twitter.com/visibel_ai" },
+        { text: "LinkedIn", url: "https://linkedin.com/company/visibel" },
       ],
     },
   ],
-  copyright = "© 2024 CreditMatch. All rights reserved.",
+  copyright = "© 2025 Visibel. All rights reserved.",
   bottomLinks = [
     { text: "Terms and Conditions", url: "/terms" },
     { text: "Privacy Policy", url: "/privacy" },
