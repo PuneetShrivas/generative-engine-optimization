@@ -55,13 +55,13 @@ const ContainerTextFlipDemo = () => {
         opacity: 1,
       }}
       className={cn(
-        " relative text-sm text-center leading-tight md:text-5xl text-xl",
-        "text-foreground",
+        " relative text-lg sm:text-xl md:text-3xl lg:text-5xl text-center leading-tight",
+        "text-foreground px-2",
       )}
       layout
     >
       <div className="inline-block items-center text-center">
-        Get your restaurant mentioned by <br /> <ContainerTextFlip words={words} images={images} />
+        Get <span className="hidden sm:inline"> your restaurant </span> mentioned by <br className="hidden sm:block" /> <ContainerTextFlip words={words} images={images} />
         {/* <Blips /> */}
       </div>
     </motion.h1>
@@ -70,44 +70,44 @@ const ContainerTextFlipDemo = () => {
 
 const HeroScrollDemo = () => {
   return (
-    <div className="max-w-5xl mx-auto">
-      <div className="max-w-5xl mx-auto text-center mb-8 relative z-2 ">
-        <h2 className="text-3xl font-bold text-foreground z-20">Meet your AI visibility command center.</h2>
-        <p className="text-xl text-foreground/80 z-20">Every query. Every mention. Every opportunity.</p>
-      </div>
+    <div className="max-w-5xl mx-auto px-4 sm:px-6">
+  <div className="max-w-5xl mx-auto text-center mb-4 sm:mb-8 relative z-2">
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground z-20 px-2">Meet your AI visibility <span className="hidden sm:inline">command</span> center.</h2>
+    <p className="text-base sm:text-lg md:text-xl text-foreground/80 z-20 mt-2 px-2">Every query. Every mention. Every opportunity.</p>
+  </div>
 
-      <motion.div
-        initial={{
-          opacity: 0,
-          y: 10,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          duration: 0.3,
-          delay: 1.2,
-        }}
-        className="relative z-2 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
-      >
-        <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
-          <img
-            src="ss.webp"
-            alt="Landing page preview"
-            className="aspect-[16/9] h-auto w-full object-cover"
-            height={1000}
-            width={1000}
-          />
-        </div>
-      </motion.div>
+  <motion.div
+    initial={{
+      opacity: 0,
+      y: 10,
+    }}
+    animate={{
+      opacity: 1,
+      y: 0,
+    }}
+    transition={{
+      duration: 0.3,
+      delay: 1.2,
+    }}
+    className="relative z-2 rounded-xl sm:rounded-2xl md:rounded-3xl border border-neutral-200 bg-neutral-100 p-1 sm:p-2 md:p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
+  >
+    <div className="w-full overflow-hidden rounded-lg md:rounded-xl border border-gray-300 dark:border-gray-700">
+      <img
+        src="ss.webp"
+        alt="Landing page preview"
+        className="aspect-[16/9] h-auto w-full object-cover"
+        height={1000}
+        width={1000}
+      />
     </div>
+  </motion.div>
+</div>
   );
 }
 
 const Workflows = () => {
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6">
       <div className="max-w-5xl mx-auto text-center relative z-2 ">
         <div className="text-center mt-6 mb-4">
           {/* <HeroHighlight> */}
@@ -124,7 +124,7 @@ const Workflows = () => {
               duration: 0.5,
               ease: [0.4, 0.0, 0.2, 1],
             }}
-            className="px-4 md:text-3xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
+            className="px-2 text-xl sm:text-2xl md:text-3xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
           >
             High-impact content,{" "}
             <Highlight className="text-black dark:text-white">
@@ -133,7 +133,7 @@ const Workflows = () => {
           </motion.h1>
           {/* </HeroHighlight> */}
         </div>
-        <p className="text-xl text-foreground/80 z-20"> Stop guessing what to publish. Deploy proven workflows mapping to traveler questions everyday</p>
+        <p className="text-base sm:text-lg md:text-xl text-foreground/80 z-20 px-2"> Stop guessing what to publish. Deploy proven workflows mapping to traveler questions everyday</p>
       </div>
 
       <motion.div
@@ -149,9 +149,9 @@ const Workflows = () => {
           duration: 0.3,
           delay: 1.2,
         }}
-        className="relative z-2 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
+        className="relative z-2 rounded-xl sm:rounded-2xl md:rounded-3xl border border-neutral-200 bg-neutral-100 p-1 sm:p-2 md:p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900"
       >
-        <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
+        <div className="w-full overflow-hidden rounded-lg sm:rounded-xl border border-gray-300 dark:border-gray-700">
           <img
             src="ss2.webp"
             alt="Landing page preview"
@@ -168,7 +168,7 @@ const Workflows = () => {
 
 const SectionCards = () => {
   return (
-    <div className="flex flex-col gap-4 py-10 mb-4 relative z-20">
+    <div className="flex flex-col gap-4 py-6 sm:py-10 mb-4 relative z-20 px-4 sm:px-6">
       <div className="text-center mt-6 mb-4">
         {/* <HeroHighlight> */}
         <motion.h1
@@ -184,7 +184,7 @@ const SectionCards = () => {
             duration: 0.5,
             ease: [0.4, 0.0, 0.2, 1],
           }}
-          className="px-4 md:text-3xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
+          className="px-2 text-xl sm:text-2xl md:text-3xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
         >
           Two engines. One outcome.{" "}
           <Highlight className="text-black dark:text-white">
@@ -194,22 +194,23 @@ const SectionCards = () => {
         {/* </HeroHighlight> */}
       </div>
 
-      <div className="flex flex-row space-x-10 mb-4 items-center mx-auto">
+      <div className="flex flex-col lg:flex-row lg:space-x-6 xl:space-x-10 space-y-6 lg:space-y-0 mb-4 items-center mx-auto max-w-6xl">
         <CardSpotlightDemo />
         <CardSpotlightDemoRight />
       </div>
     </div>
   );
 }
+
 const CardSpotlightDemo = () => {
   return (
-    <CardSpotlight className="h-[270px] w-[500px]">
-      <p className="text-xl font-bold relative z-20 mt-2 text-white">
+    <CardSpotlight className="h-auto min-h-[270px] w-full lg:w-[500px] p-4 sm:p-6">
+      <p className="text-lg sm:text-xl font-bold relative z-20 mt-2 text-white">
         AEO - Answer Engine Optimization
       </p>
       <div className="text-neutral-200 mt-4 relative z-20">
         Structures your site for AI to quote:
-        <ul className="list-none  mt-2">
+        <ul className="list-none mt-2 space-y-1">
           <Step title="Traveler-style FAQs by room type, amenities, etc." />
           <Step title="Neighborhood, attraction, and route guides" />
           <Step title="Rich schema (LocalBusiness, Hotel, FAQ, Reviews)" />
@@ -219,22 +220,22 @@ const CardSpotlightDemo = () => {
     </CardSpotlight>
   );
 }
+
 const CardSpotlightDemoRight = () => {
   return (
-    <CardSpotlight className="h-[270px] w-[500px]" right={true}>
-      <p className="text-xl font-bold relative z-20 mt-2 text-white">
+    <CardSpotlight className="h-auto min-h-[270px] w-full lg:w-[500px] p-4 sm:p-6" right={true}>
+      <p className="text-lg sm:text-xl font-bold relative z-20 mt-2 text-white">
         GEO – Generative Engine Optimization
       </p>
       <div className="text-neutral-200 mt-4 relative z-20">
-        Get talked about by LLMs so you’re chosen more.
-        <ul className="list-none  mt-2">
+        Get talked about by LLMs so you're chosen more.
+        <ul className="list-none mt-2 space-y-1">
           <Step title="Strategic brand mentions in Agentic search" />
           <Step title="High-signal reviews + consistency across major LLMs" />
           <Step title="Model trust that convinces AI models to pick you" />
           <Step title="Multilingual coverage for EU and global travelers" />
         </ul>
       </div>
-     
     </CardSpotlight>
   );
 }
@@ -312,9 +313,9 @@ export default function Page() {
               <NavbarButton variant="primary">
                 <Link href="/auth/login">Get Score</Link>
               </NavbarButton>
-              <NavbarButton variant="empty">
-                <ModeToggle />
-              </NavbarButton>
+              {/* <NavbarButton variant="empty"> */}
+                {/* <ModeToggle /> */}
+              {/* </NavbarButton> */}
             </div>
           </NavBody>
 
@@ -348,9 +349,9 @@ export default function Page() {
                   variant="primary"
                   className="w-full"
                 >
-                  <Link href="/auth/login">Login</Link>
+                  <Link href="/auth/login">Get Started</Link>
                 </NavbarButton>
-                <ModeToggle />
+                {/* <ModeToggle /> */}
 
               </div>
             </MobileNavMenu>
@@ -410,26 +411,26 @@ const PageContent = () => {
 
 const FinalCTA = () => {
   return (
-<div className="max-w-5xl mx-auto py-10">
-    <div className="h-full py-10 min-w-5xl rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
-      <div className="max-w-2xl mx-auto p-4">
-        <h1 className="relative z-10 text-lg md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold">
-          Own the top slot in AI answers.
-        </h1>
-        <p className="text-neutral-500 max-w-lg mx-auto my-4 text-sm text-center relative z-10">
-          Start with a free Brand AI Visibility Score and a punch-list of actions to win your city&apos;s most valuable queries.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6 relative z-10">
-          <Button className="px-6 py-2 bg-gradient-to-r from-blue-500 to-teal-500 text-white rounded-lg">
-            Get My Free Score <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-          <Button variant="outline" className="px-6 py-2 border border-neutral-700 text-neutral-300 rounded-lg hover:bg-neutral-800">
-            Talk to an Expert
-          </Button>
+    <div className="max-w-5xl mx-auto py-4 sm:py-10 px-4 sm:px-6">
+      <div className="h-full py-6 sm:py-10 min-w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
+        <div className="max-w-2xl mx-auto p-2 sm:p-4">
+          <h1 className="relative z-10 text-xl sm:text-3xl md:text-5xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold leading-tight">
+            Own the top slot in AI answers.
+          </h1>
+          <p className="text-neutral-500 max-w-lg mx-auto my-2 sm:my-4 text-xs sm:text-base text-center relative z-10 px-2">
+            Start with a free Brand AI Visibility Score and a punch-list of actions to win your city&apos;s most valuable queries.
+          </p>
+          <div className="flex flex-col gap-2 sm:flex-row sm:gap-4 justify-center mt-4 sm:mt-6 relative z-10 px-2">
+            <Button className="px-3 sm:px-6 py-1.5 sm:py-2 bg-gradient-to-r from-blue-500 to-teal-500 text-white rounded-lg text-xs sm:text-base w-full sm:w-auto">
+              Get My Free Score <ArrowRight className="ml-1 sm:ml-2 h-3 w-3 sm:h-4 sm:w-4" />
+            </Button>
+            <Button variant="outline" className="px-3 sm:px-6 py-1.5 sm:py-2 border border-neutral-700 text-neutral-300 rounded-lg hover:bg-neutral-800 text-xs sm:text-base w-full sm:w-auto">
+              Talk to an Expert
+            </Button>
+          </div>
         </div>
+        <BackgroundBeams />
       </div>
-      <BackgroundBeams />
-    </div>
     </div>
   );
 };
@@ -439,11 +440,11 @@ const Hero = () => {
   const { resolvedTheme } = useTheme();
 
   return (
-    <div className="h-[500px] relative w-full overflow-hidden bg-background flex flex-col items-center justify-center rounded-lg">
+    <div className="h-[400px] sm:h-[450px] lg:h-[500px] relative w-full overflow-hidden bg-background flex flex-col items-center justify-center rounded-lg">
       <div className="absolute inset-0 w-full h-full bg-background z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
       <Boxes />
-      <div className="mx-40 z-20 flex flex-col space-y-2 items-center">
-        <div className="flex flex-row items-center justify-center align-middle mb-2 text-foreground/70 space-x-6">
+      <div className="mx-4 sm:mx-8 md:mx-20 lg:mx-40 z-20 flex flex-col space-y-2 items-center">
+        <div className="hidden md:flex flex-row items-center justify-center align-middle mb-2 text-foreground/70 space-x-4 lg:space-x-6 text-sm lg:text-base">
           <p>GDPR-ready</p>
           <span className="text-foreground/70">|</span>
           <p>Works with your CMS</p>
@@ -451,16 +452,15 @@ const Hero = () => {
           <p>Fast setup</p>
         </div>
         <ContainerTextFlipDemo />
-        <p className="text-lg mt-2 text-center text-foreground relative z-20 max-w-xl">
-          Travelers don’t “search” anymore - they ask. <br /> Reach millions searching for their next restaurant recommendation.
+        <p className="text-sm sm:text-base lg:text-lg mt-2 text-center text-foreground relative z-20 max-w-xl px-2">
+          Travelers don't "search" <span className="hidden sm:inline"> anymore </span> - they ask. <br className="hidden sm:block" /> <span className="hidden sm:inline"> Reach millions searching for their next restaurant recommendation.</span>
         </p>
-        <div className="flex flex-row items-center justify-center align-middle gap-6">
-          <Button className=" mt-4 w-fit h-9"><Link className='flex flex-row gap-2' href="/auth/sign-up">Get Free Score <ArrowRight /> </Link></Button>
-          <Button className=" mt-4 w-fit h-9" variant="secondary"><Link className='flex flex-row gap-2' href="/auth/sign-up">How it Works </Link></Button>
+        <div className="flex flex-col sm:flex-row items-center justify-center align-middle gap-3 sm:gap-6 w-full sm:w-auto">
+          <Button className="mt-4 w-full sm:w-fit h-9 text-sm sm:text-base"><Link className='flex flex-row gap-2 items-center justify-center' href="/auth/sign-up">Get Free Score <ArrowRight className="h-4 w-4" /> </Link></Button>
+          <Button className="mt-2 sm:mt-4 w-full sm:w-fit h-9 text-sm sm:text-base" variant="secondary"><Link className='flex flex-row gap-2 items-center justify-center' href="/auth/sign-up">How it Works </Link></Button>
         </div>
       </div>
     </div>
   );
 }
-
 

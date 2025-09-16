@@ -92,25 +92,25 @@ const ChatInterface = ({ title, messages, isOptimized = false }: any) => {
     return (
         <div className="flex flex-col h-full bg-white/5 backdrop-blur rounded-lg border border-white/10">
             {/* Header */}
-            <div className="flex items-center justify-between p-3 border-b border-white/10">
+            <div className="flex items-center justify-between p-2 sm:p-3 border-b border-white/10">
                 <div className="flex items-center space-x-2">
-                    <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-                        <img src="/chatgpt-logo.png" className="w-5 h-5 text-white" alt="ChatGPT logo" />
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white/10 flex items-center justify-center">
+                        <img src="/chatgpt-logo.png" className="w-3 h-3 sm:w-5 sm:h-5 text-white" alt="ChatGPT logo" />
                     </div>
-                    <span className="text-white/90 font-medium text-sm">{title}</span>
+                    <span className="text-white/90 font-medium text-xs sm:text-sm">{title}</span>
                 </div>
                 <div className="flex space-x-1">
-                    <div className="w-2 h-2 rounded-full bg-red-400"></div>
-                    <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
-                    <div className="w-2 h-2 rounded-full bg-green-400"></div>
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-red-400"></div>
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-yellow-400"></div>
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-green-400"></div>
                 </div>
             </div>
 
             {/* Chat Messages */}
-            <div className="flex-1 p-4 space-y-4 overflow-hidden">
+            <div className="flex-1 p-2 sm:p-4 space-y-2 sm:space-y-4 overflow-hidden">
                 {messages.slice(0, currentMessageIndex + 1).map((message: any, index: any) => (
                     <div key={index} className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}>
-                        <div className={`max-w-[80%] rounded-2xl px-4 py-2 text-sm ${message.isUser
+                        <div className={`max-w-[85%] sm:max-w-[80%] rounded-2xl px-3 sm:px-4 py-2 text-xs sm:text-sm ${message.isUser
                                 ? 'bg-blue-500 text-white ml-auto'
                                 : 'bg-white/10 text-white/90 backdrop-blur'
                             }`}>
@@ -160,22 +160,22 @@ const ChatInterface = ({ title, messages, isOptimized = false }: any) => {
             </div>
 
             {/* Input Bar */}
-            <div className="p-3 border-t border-white/10">
-                <div className="flex items-center space-x-2 bg-white/5 rounded-full px-3 py-2 border border-white/10">
-                    <button className="p-1 hover:bg-white/10 rounded-full transition-colors opacity-50 cursor-not-allowed">
-                        <Plus size={16} className="text-white/60" />
+            <div className="p-2 sm:p-3 border-t border-white/10">
+                <div className="flex items-center space-x-1 sm:space-x-2 bg-white/5 rounded-full px-2 sm:px-3 py-1.5 sm:py-2 border border-white/10">
+                    <button className="p-0.5 sm:p-1 hover:bg-white/10 rounded-full transition-colors opacity-50 cursor-not-allowed">
+                        <Plus size={14} className="text-white/60 sm:w-4 sm:h-4" />
                     </button>
                     <input
                         type="text"
                         placeholder="Type a message..."
-                        className="flex-1 bg-transparent text-white/60 placeholder-white/40 text-sm outline-none cursor-not-allowed"
+                        className="flex-1 bg-transparent text-white/60 placeholder-white/40 text-xs sm:text-sm outline-none cursor-not-allowed"
                         disabled
                     />
-                    <button className="p-1 hover:bg-white/10 rounded-full transition-colors opacity-50 cursor-not-allowed">
-                        <Mic size={16} className="text-white/60" />
+                    <button className="p-0.5 sm:p-1 hover:bg-white/10 rounded-full transition-colors opacity-50 cursor-not-allowed">
+                        <Mic size={14} className="text-white/60 sm:w-4 sm:h-4" />
                     </button>
-                    <button className="p-1 hover:bg-white/10 rounded-full transition-colors opacity-50 cursor-not-allowed">
-                        <Send size={16} className="text-white/60" />
+                    <button className="p-0.5 sm:p-1 hover:bg-white/10 rounded-full transition-colors opacity-50 cursor-not-allowed">
+                        <Send size={14} className="text-white/60 sm:w-4 sm:h-4" />
                     </button>
                 </div>
             </div>
@@ -209,10 +209,10 @@ const HotelAIComparison = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-black p-8">
+        <div className="min-h-screen bg-black p-4 sm:p-6 lg:p-8">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
-                <div className="text-center mt-6 mb-6 relative z-2">
+                <div className="text-center mt-4 sm:mt-6 mb-4 sm:mb-6 relative z-2">
                     {/* <HeroHighlight> */}
                     <motion.h1
                         initial={{
@@ -227,7 +227,7 @@ const HotelAIComparison = () => {
                             duration: 0.5,
                             ease: [0.4, 0.0, 0.2, 1],
                         }}
-                        className="px-4 md:text-3xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
+                        className="px-4 text-xl sm:text-2xl md:text-3xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
                     >
                         From invisible to {" "}
                         <Highlight className="text-black dark:text-white">
@@ -247,15 +247,15 @@ const HotelAIComparison = () => {
                 </div>
 
                 {/* Comparison Cards */}
-                <div className="border border-neutral-800 dark:border-neutral-800 mb-4 rounded-lg mx-auto p-2 max-w-5xl">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-5xl mx-auto w-full">
+                <div className="border border-neutral-800 dark:border-neutral-800 mb-4 rounded-lg mx-auto p-2 sm:p-4 max-w-5xl">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto w-full">
                         <WobbleCard containerClassName="h-full">
                             <div className="h-full flex flex-col">
-                                <div className="mb-4">
-                                    <h2 className="text-xl font-semibold text-white ">
+                                <div className="mb-3 sm:mb-4">
+                                    <h2 className="text-lg sm:text-xl font-semibold text-white">
                                         Before: Current AI Results
                                     </h2>
-                                    <p className="text-white/70 text-sm">
+                                    <p className="text-white/70 text-xs sm:text-sm">
                                         Your brand missing or buried in generic listings
                                     </p>
                                 </div>
@@ -271,11 +271,11 @@ const HotelAIComparison = () => {
 
                         <WobbleCard containerClassName="h-full bg-gradient-to-br from-pink-800 to-purple-800">
                             <div className="h-full flex flex-col">
-                                <div className="mb-4">
-                                    <h2 className="text-xl font-semibold text-white ">
+                                <div className="mb-3 sm:mb-4">
+                                    <h2 className="text-lg sm:text-xl font-semibold text-white">
                                         After: AI-Optimized Results
                                     </h2>
-                                    <p className="text-white/70 text-sm">
+                                    <p className="text-white/70 text-xs sm:text-sm">
                                         Your hotel appears first with compelling, cited justification
                                     </p>
                                 </div>
