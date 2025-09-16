@@ -228,7 +228,7 @@ const CardSpotlightDemoRight = () => {
         GEO – Generative Engine Optimization
       </p>
       <div className="text-neutral-200 mt-4 relative z-20">
-        Get talked about by LLMs so you're chosen more.
+        Get talked about by LLMs so you&apos;re chosen more.
         <ul className="list-none mt-2 space-y-1">
           <Step title="Strategic brand mentions in Agentic search" />
           <Step title="High-signal reviews + consistency across major LLMs" />
@@ -453,7 +453,7 @@ const Hero = () => {
         </div>
         <ContainerTextFlipDemo />
         <p className="text-sm sm:text-base lg:text-lg mt-2 text-center text-foreground relative z-20 max-w-xl px-2">
-          Travelers don't "search" <span className="hidden sm:inline"> anymore </span> - they ask. <br className="hidden sm:block" /> <span className="hidden sm:inline"> Reach millions searching for their next restaurant recommendation.</span>
+          Travelers don&apos;t &quot;search&quot; <span className="hidden sm:inline"> anymore </span> - they ask. <br className="hidden sm:block" /> <span className="hidden sm:inline"> Reach millions searching for their next restaurant recommendation.</span>
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center align-middle gap-3 sm:gap-6 w-full sm:w-auto">
           <Button className="mt-4 w-full sm:w-fit h-9 text-sm sm:text-base"><Link className='flex flex-row gap-2 items-center justify-center' href="/auth/sign-up">Get Free Score <ArrowRight className="h-4 w-4" /> </Link></Button>
